@@ -1,0 +1,304 @@
+<script>
+var number=2; //定义条目数
+
+function LMYC2() {
+var lbmc;
+var lbmcplus;
+var lbmcminus;
+    for (i=1;i<=number;i++) {
+        lbmc = eval('LMM' + i);
+		lbmcplus = eval('IPP' + i);
+		lbmcminus = eval('IMM' + i);
+        lbmc.style.display = 'none';
+		lbmcplus.style.display = '';
+		lbmcminus.style.display = 'none';
+    }
+}
+ 
+function ShowFLT2(i) {
+    lbmc = eval('LMM' + i);
+	lbmcplus = eval('IPP' + i);
+	lbmcminus = eval('IMM' + i);
+    if (lbmc.style.display == 'none') {
+        LMYC2();
+        lbmc.style.display = '';
+		lbmcplus.style.display = 'none';
+		lbmcminus.style.display = '';
+    }
+    else {
+        lbmc.style.display = 'none';
+		lbmcplus.style.display = '';
+		lbmcminus.style.display = 'none';
+    }
+}
+</script>
+
+<p>中欧创业营课程采用模块制，共计七大模块。课程总时间跨度一年。</p>
+<style type="text/css">.main-container section.col-sm-9 .region-content table tbody tr strong {
+    font-size: 14px;
+}
+</style>
+<dl>
+	<dt style="cursor: pointer; color: #984807" href="javascript:void(null)" onclick="javascript:ShowFLT2(1)"><a href="javascript:;"><span id="IPP1" style="display: none;">+</span><span id="IMM1">-</span> 第六期中欧创业营核心课程时间表 （草拟）</a></dt>
+	<dd id="LMM1">
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<td width="225"><strong>课程 </strong></td>
+			<td width="104"><strong>地点 </strong></td>
+			<td width="244"><strong>日期 </strong></td>
+			<td width="200"><strong>授课教授</strong></td>
+			<td width="113"><strong>天数 </strong></td>
+		</tr>
+		<tr>
+			<td valign="top" width="225">
+			<p>课前模块：破冰仪式</p>
+			</td>
+			<td width="104">
+			<p>上海</p>
+			</td>
+			<td valign="top" width="244">
+			<p>2017年9月14日</p>
+			</td>
+			<td width="200">&nbsp;</td>
+			<td width="113">
+			<p>1天</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top" width="225">
+			<p>模块一：精益创业</p>
+			</td>
+			<td width="104">
+			<p>上海</p>
+			</td>
+			<td valign="top" width="244">
+			<p>2017年9月15-18日</p>
+			</td>
+			<td valign="top" width="200">
+			<p><a href="http://cn.ceibs.edu/gong-yan">龚焱</a></p>
+			</td>
+			<td width="113">
+			<p>4天</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top" width="225">
+			<p>模块二：创业战略与平台思维</p>
+			</td>
+			<td width="104">
+			<p>北京</p>
+			</td>
+			<td valign="top" width="244">
+			<p>2017年11月3-6日</p>
+			</td>
+			<td valign="top" width="200">
+			<p><a href="http://cn.ceibs.edu/chen-weiru">陈威如</a></p>
+			</td>
+			<td width="113">
+			<p>4天</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top" width="225">
+			<p>模块三：海外模块（硅谷）</p>
+			</td>
+			<td width="104">
+			<p>硅谷</p>
+			</td>
+			<td valign="top" width="244">
+			<p>2017年1月8-12日</p>
+			</td>
+			<td valign="top" width="200">
+			<p><a href="http://cn.ceibs.edu/gong-yan">龚焱</a>/<a href="http://cn.ceibs.edu/chen-weiru">陈威如 </a></p>
+			</td>
+			<td width="113">
+			<p>5天</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top" width="225">
+			<p>模块四：组织创新</p>
+			</td>
+			<td width="104">
+			<p>深圳</p>
+			</td>
+			<td valign="top" width="244">
+			<p>2018年3月2-5日</p>
+			</td>
+			<td valign="top" width="200">
+			<p><a href="http://cn.ceibs.edu/hwang-yuhchang">黄煜昌 </a></p>
+			</td>
+			<td width="113">
+			<p>4天</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top" width="225">
+			<p>模块五：戈壁领导力</p>
+			</td>
+			<td width="104">
+			<p>敦煌</p>
+			</td>
+			<td valign="top" width="244">
+			<p>2018年4月27-30日</p>
+			</td>
+			<td valign="top" width="200">
+			<p><a href="http://cn.ceibs.edu/lee-jean-s-k">李秀娟</a>/<a href="http://cn.ceibs.edu/xin-katherine-r">忻榕 </a></p>
+			</td>
+			<td width="113">
+			<p>4天</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top" width="225">
+			<p>模块六：资本创新</p>
+			</td>
+			<td width="104">
+			<p>上海</p>
+			</td>
+			<td valign="top" width="244">
+			<p>2018年6月29-7月2日</p>
+			</td>
+			<td valign="top" width="200">
+			<p><a href="http://cn.ceibs.edu/ramasamy-bala">Ramasamy Bala&nbsp;</a></p>
+			</td>
+			<td width="113">
+			<p>4天</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top" width="225">
+			<p>模块七：海外模块（印度）</p>
+			</td>
+			<td width="104">
+			<p>印度</p>
+			</td>
+			<td valign="top" width="244">
+			<p>2018年8月20-8月24日</p>
+			</td>
+			<td valign="top" width="200">
+			<p><a href="http://cn.ceibs.edu/ramasamy-bala">Ramasamy Bala&nbsp;</a></p>
+			</td>
+			<td width="113">
+			<p>5天</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</dd>
+<dt style="cursor: pointer; color: #984807" href="javascript:void(null)" onclick="javascript:ShowFLT2(2)"><a href="javascript:;"><span id="IPP2">+</span><span id="IMM2" style="display: none;">-</span> 第五期中欧创业营核心课程时间表</a></dt>
+<dd id="LMM2" style="display: none;">
+<table border="0" cellpadding="1" cellspacing="1" width="100%">
+	<thead>
+		<tr>
+			<th align="left" class="rteleft" scope="col">上课时间</th>
+			<th align="left" scope="col">
+			<p>上课地点</p>
+			</th>
+			<th align="left" class="rteleft" scope="col">模块设置</th>
+			<th align="left" scope="col">授课教授</th>
+			<th align="left" scope="col">课程表</th>
+			<th align="left" scope="col">课程花絮</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td align="left" width="313">2016年9月1日</td>
+			<td align="left" width="158">上海</td>
+			<td align="left" width="423">预热模块：破冰仪式与团队建设</td>
+			<td align="left" valign="middle" width="167">&nbsp;</td>
+			<td align="left" valign="middle" width="126">&nbsp;</td>
+			<td align="left" valign="middle" width="150">
+			<p><a href="http://cn.ceibs.edu/node/8897">观看视频</a></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="313">2016年9月2日-5日</td>
+			<td width="158">上海</td>
+			<td align="left" width="423">
+			<p>模块一：精益创业</p>
+			</td>
+			<td valign="middle" width="167"><span style="text-align: -webkit-center;"><a href="http://cn.ceibs.edu/gong-yan">龚焱</a></span></td>
+			<td valign="middle" width="126"><a href="/sites/default/files/eplatform-images/docs/第一模块日程安排.pdf">点击下载</a></td>
+			<td align="left" valign="middle" width="150">
+			<p><a href="http://cn.ceibs.edu/node/9601">观看视频</a></p>
+			</td>
+		</tr>
+		<tr>
+			<td width="313">2016年11月4日-7日</td>
+			<td width="158">北京</td>
+			<td align="left" width="423">
+			<p>模块二：商业趋势与科技创新</p>
+			</td>
+			<td valign="middle" width="167"><a href="http://cn.ceibs.edu/chen-weiru">陈威如</a></td>
+			<td valign="middle" width="126"><a href="/sites/default/files/eplatform-images/docs/%E6%A8%A1%E5%9D%97%E4%BA%8C%E6%97%A5%E7%A8%8B%E5%AE%89%E6%8E%92.pdf"><span style="text-align: -webkit-center;">点击下载</span></a></td>
+			<td align="left" valign="middle" width="150">
+			<p><a href="http://cn.ceibs.edu/node/9602">观看视频</a></p>
+			</td>
+		</tr>
+		<tr>
+			<td align="left" width="313">2017年1月8日-12日</td>
+			<td align="left" width="158">以色列</td>
+			<td align="left" width="423">
+			<p>模块三：【海外模块】以色列创新之路</p>
+			</td>
+			<td valign="middle" width="167"><a href="http://cn.ceibs.edu/gong-yan">龚焱</a></td>
+			<td valign="middle" width="126"><a href="/sites/default/files/eplatform-images/docs/%E6%A8%A1%E5%9D%97%E4%B8%89%E6%97%A5%E7%A8%8B%E5%AE%89%E6%8E%92.pdf"><span style="text-align: -webkit-center;">点击下载</span></a></td>
+			<td valign="middle" width="150"><a href="http://cn.ceibs.edu/video/10187">观看视频</a></td>
+		</tr>
+		<tr>
+			<td width="313">2017年3月17日-20日</td>
+			<td width="158">深圳</td>
+			<td align="left" width="423">
+			<p>模块四：组织创新与激励</p>
+			</td>
+			<td valign="top" width="167"><a href="http://cn.ceibs.edu/hwang-yuhchang">黄钰昌</a></td>
+			<td valign="top" width="126">&nbsp;</td>
+			<td valign="top" width="150">&nbsp;</td>
+		</tr>
+		<tr>
+			<td>2017年5月8日-12日</td>
+			<td>印度</td>
+			<td align="left">
+			<p>模块五：【海外模块】玄奘之路：中国企业国际化探索</p>
+			</td>
+			<td valign="top"><a href="http://cn.ceibs.edu/ramasamy-bala">Ramasamy Bala&nbsp;</a></td>
+			<td valign="top">&nbsp;</td>
+			<td valign="top">&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="313">2017年6月30日 -7月3日</td>
+			<td width="158">上海</td>
+			<td align="left" width="423">
+			<p>模块六：资本创新</p>
+			</td>
+			<td valign="top" width="167"><a href="http://cn.ceibs.edu/su-xijia">苏锡嘉</a></td>
+			<td valign="top" width="126">&nbsp;</td>
+			<td valign="top" width="150">&nbsp;</td>
+		</tr>
+		<tr>
+			<td>2017年9月4日-9日</td>
+			<td>瑞士/德国</td>
+			<td align="left">
+			<p>模块七：【海外模块】瑞士德国创新之路：隐形冠军</p>
+			</td>
+			<td valign="top"><a href="http://cn.ceibs.edu/chen-weiru">陈威如</a></td>
+			<td align="left" valign="top">&nbsp;</td>
+			<td align="left" valign="top">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="left" valign="top" width="313">&nbsp;</td>
+			<td align="left" valign="top" width="158">&nbsp;</td>
+			<td align="left" width="423">
+			<p>毕业项目展示</p>
+			</td>
+			<td align="left" valign="top" width="167">&nbsp;</td>
+			<td align="left" valign="top" width="126">&nbsp;</td>
+			<td align="left" valign="top" width="150">&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+</dd>
+</dl>
+<p style="margin-top: 30px;"><span style="color: rgb(178, 34, 34);"><em>* 以上信息更新至2017年3月20日，我院保留对课程信息（包括课程时间、地点、具体安排等细节）进行调整的权利。</em></span></p>

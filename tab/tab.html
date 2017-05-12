@@ -1,0 +1,686 @@
+<script type="text/javascript" src="jquery.min1.9.1.js"></script>
+<style type="text/css">#idealist ul li {margin: 0; padding: 0; list-style: none;}
+        #title span {float: left; border: 1px solid #fafafa; padding: 10px; margin-bottom: 20px; width: 32%; font-size: 16px; text-align: center; color: #ccc; background: #000; cursor: pointer; font-weight: bold;}
+        #idealist li{display: none;}
+        #title span.select {background: #bf0000; color: #ccc;}
+        #idealist li.show {display: block;}
+        #title{width:100%;}
+</style>
+<script>
+(function($) {
+        $(document).ready(function(){
+		$('#title span').click(function() {
+            var i = $('#title span').index(this);
+            $(this).addClass('select').siblings().removeClass('select');
+            $('#idealist li').eq(i).show().siblings().hide();
+		});
+        });
+})(jQuery);
+</script>
+<div id="title"><span class="select">Batch 3</span><span>Batch 2</span><span>Batch 1</span></div>
+
+<ul id="idealist">
+	<li class="show">
+	<h3 style="clear: left;">Batch 3 (Oct. 2016—Feb. 2017)</h3>
+
+	<h3>Acceleration</h3>
+
+	<div class="peoplebox">
+	<p><img alt="" class="peoplepics" src="/sites/default/files/pictures/newDenise%20Pu.jpg" />Denise Pu<br />
+	Founder, YOLOBOO</p>
+
+	<p>MBA 2010</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><img alt="" class="peoplepics" src="/sites/default/files/pictures/Xuan%20GONG.jpg" />Xuan GONG<br />
+	Co-Founder, YOLOBOO</p>
+
+	<p>MBA 2010</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><img alt="" class="peoplepics" src="/sites/default/files/pictures/Jiangang%20GONG.jpg" />Jiangang GONG<br />
+	Co-founder, Movoya</p>
+
+	<p>MBA 2010</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><img alt="" class="peoplepics" src="/sites/default/files/pictures/Movoya-profile%20photo.jpg" />Johannes MUFFLER<br />
+	Founder, Movoya</p>
+
+	<p>MBA 2010</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6689"><img alt="" class="peoplepics" src="/sites/default/files/pictures/danielwang.jpg" />Daniel WANG</a><br />
+	Founder, PARADISH</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6812"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Hao%20SUN.jpg" />Hao SUN</a><br />
+	Founder, Meidameixiao</p>
+
+	<p>EMBA 2009</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><img alt="" class="peoplepics" src="/sites/default/files/pictures/zhiyufounder.jpg" />Kathy FU<br />
+	Founder, Meet Knits</p>
+
+	<p>EMBA 2009</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6685"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Leo%20TAO.jpg" />Leo TAO</a><br />
+	Founder, Lohhas</p>
+
+	<p>EMBA 2010</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6811"><img alt="" class="peoplepics" src="/sites/default/files/pictures/yuminlin.jpg" />Yu-Min LIN</a><br />
+	Founder, River Security</p>
+
+	<p>EMBA 2013</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6688"><img alt="" class="peoplepics" src="/sites/default/files/pictures/TaoGong.jpg" />Tao GONG</a><br />
+	Founder, DaDa</p>
+
+	<p>EMBA 2014</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6681"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Hank%20He.jpg" />Hank HE</a><br />
+	Founder, ALLCHEER</p>
+
+	<p>EMBA 2014</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/elab"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Yongjiang%20LIU.jpg" />Yongjiang LIU</a><br />
+	Founder, Marine+</p>
+
+	<p>EMBA 2014</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><img alt="" class="peoplepics" src="/sites/default/files/pictures/Sophia%20XIA.jpg" />Sophia XIA</p>
+
+	<p>EMBA 2014</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><img alt="" class="peoplepics" src="/sites/default/files/pictures/Jian%20REN.jpg" />Jian REN</p>
+
+	<p>EMBA 2014</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6810"><img alt="" class="peoplepics" src="/sites/default/files/pictures/lihuiqing.jpg" />Huiqing LI</a></p>
+
+	<p>EMBA 2015</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><img alt="" class="peoplepics" src="/sites/default/files/pictures/Zhijun%20TANG.jpg" />Zhijun TANG</p>
+
+	<p>EMBA 2015</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><img alt="" class="peoplepics" src="/sites/default/files/pictures/Zhendan%20LI.jpg" />Zhendan LI<br />
+	Founder, Power Ark</p>
+
+	<p>EMBA 2016</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6807"><img alt="" class="peoplepics" src="/sites/default/files/pictures/jayha.jpg" />Jay HA</a><br />
+	Founder,ICONtv</p>
+
+	<p>GEMBA 2014</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6680"><img alt="" class="peoplepics" src="/sites/default/files/pictures/zhangcheng.jpg" />Cheng ZHANG</a><br />
+	Founder, Lovelive</p>
+
+	<p>CMO 2014</p>
+	</div>
+
+	<h3 style="clear:both">Evaluation</h3>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6813"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Michael%20TANG.jpg" />Michael TANG</a><br />
+	Co-founder, Tonghang Live</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><img alt="" class="peoplepics" src="/sites/default/files/pictures/Stephanie%20LU.jpg" />Stephanie LU<br />
+	Co-founder, CEFAIRY</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/10364"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Bin%20LIAO.jpg" />Bin LIAO</a><br />
+	Co-founder, QunPengEducation</p>
+
+	<p>MBA 2018</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/10365"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Flavia%20ZHONG.jpg" />Flavia ZHONG</a><br />
+	Founder, BeneFit</p>
+
+	<p>MBA 2018</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/10366"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Siyang.jpg" />Siyang</a><br />
+	Co-founder, BeneFit</p>
+
+	<p>MBA 2018</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6807"><img alt="" class="peoplepics" src="/sites/default/files/pictures/jayha.jpg" />Jay HA</a><br />
+	Founder, Persona</p>
+
+	<p>GMBA 2014</p>
+	</div>
+
+	<h3 style="clear:both">Design</h3>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6682"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Jessie%20LIU.jpg" />Jessie LIU</a><br />
+	Founder, SmartKids</p>
+
+	<p>MBA 2012</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><img alt="" class="peoplepics" src="/sites/default/files/pictures/Mike%20YING.jpg" />Mike YING<br />
+	Founder, Train &amp; Go</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6695"><img alt="" class="peoplepics" src="/sites/default/files/pictures/jeffreytchui.jpg" />Jeffrey TCHUI</a><br />
+	Founder, Rose Valley</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6693"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Diego%20GARCIA%20FERNANDEZ.jpg" />Diego GARCIA FERNANDEZ</a><br />
+	Founder, Canary Travel</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/10367"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Yuni%20HE.jpg" />Yuni HE</a><br />
+	Founder, Shanghai Kitchen</p>
+
+	<p>MBA 2018</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/10368"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Yuting%20HAO.jpg" />Yuting HAO</a><br />
+	Co-founder, DaMei Travel</p>
+
+	<p>MBA 2018</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/10369"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Leon%20LIANG.jpg" />Leon LIANG</a><br />
+	Founder, Yuxin Tech</p>
+
+	<p>MBA 2018</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/10370"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Jasmine%20Liu.jpg" />Jasmine Liu</a><br />
+	Founder, Holyxie</p>
+
+	<p>MBA 2018</p>
+	</div>
+
+	<h3 style="clear:both">Idea</h3>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/10371"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Gilyoung%20PARK.jpg" />Gilyoung PARK</a><br />
+	Founder, Hotel AMÜZ</p>
+
+	<p>MBA 2018</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/10372"><img alt="" class="peoplepics" src="/sites/default/files/pictures/MA20180062%20Andrew%20Se%20Joon%20KIM.jpg" />Andrew Se Joon Kim</a><br />
+	Co-founder, Hotel AMÜZ</p>
+
+	<p>MBA 2018</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/10373"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Steven%20YAO.jpg" />Steven YAO</a><br />
+	Co-founder, Hotel AMÜZ</p>
+
+	<p>MBA 2018</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/10374"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Lyon%20LI.jpg" />Lyon LI</a><br />
+	Co-founder, Hotel AMÜZ</p>
+
+	<p>MBA 2018</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/10375"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Tiger%20XU.jpg" />Tiger XU</a><br />
+	Co-founder, Hotel AMÜZ</p>
+
+	<p>MBA 2018</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/10377"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Zhou%20LI.jpg" />Zhou LI</a><br />
+	Founder, AdBox</p>
+
+	<p>MBA 2018</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/10376"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Chicco%20TSENG.jpg" />Chicco TSENG</a><br />
+	Co-founder, AdBox</p>
+
+	<p>MBA 2018</p>
+	</div>
+	</li>
+	<li>
+	<h3 style="clear:both"><a id="batch2" name="batch2"></a>Batch 2 (Oct. 2016—Feb. 2017)</h3>
+
+	<h3 style="clear:both">Acceleration</h3>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6686"><img alt="" class="peoplepics" src="/sites/default/files/pictures/paultong.jpg" />Paul TONG</a><br />
+	Founder, My Fancy Box</p>
+
+	<p>GEMBA 2014</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6807"><img alt="" class="peoplepics" src="/sites/default/files/pictures/jayha.jpg" />Jeong Hoon HA</a><br />
+	Founder, The Icon TV China</p>
+
+	<p>GEMBA 2014</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6688"><img alt="" class="peoplepics" src="/sites/default/files/pictures/TaoGong.jpg" />Tao GONG</a><br />
+	Founder, DaDa</p>
+
+	<p>EMBA 2014</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6681"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Hank%20He.jpg" />Hank HE</a><br />
+	Founder, ALLCHEER</p>
+
+	<p>EMBA 2014</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/elab"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Yongjiang%20LIU.jpg" />Yongjiang LIU</a></p>
+
+	<p>EMBA 2014</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><img alt="" class="peoplepics" src="/sites/default/files/pictures/Sophia%20XIA.jpg" />Sophia XIA</p>
+
+	<p>EMBA 2014</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><img alt="" class="peoplepics" src="/sites/default/files/pictures/Jian%20REN.jpg" />Jian REN</p>
+
+	<p>EMBA 2014</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6810"><img alt="" class="peoplepics" src="/sites/default/files/pictures/lihuiqing.jpg" />Huiqing LI</a></p>
+
+	<p>EMBA 2015</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><img alt="" class="peoplepics" src="/sites/default/files/pictures/Zhijun%20TANG.jpg" />Zhijun TANG</p>
+
+	<p>EMBA 2015</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6687"><img alt="" class="peoplepics" src="/sites/default/files/pictures/chenzhiqiu_0.jpg" />Sanford CHEN</a><br />
+	Founder,Lending Bay</p>
+
+	<p>MBA 2006</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6809"><img alt="" class="peoplepics" src="/sites/default/files/pictures/vinceghossoub.jpg" />Vince GHOSSOUB </a><br />
+	Founder, Falafel-Games</p>
+
+	<p>MBA 2007</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6808"><img alt="" class="peoplepics" src="/sites/default/files/pictures/rajasekhar.jpg" />Raja Sekhar UPPUTURI </a><br />
+	Founder, think3D</p>
+
+	<p>MBA 2007</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6812"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Hao%20SUN.jpg" />Hao SUN</a><br />
+	Founder, Meidameixiao</p>
+
+	<p>EMBA 2009</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><img alt="" class="peoplepics" src="/sites/default/files/pictures/Denise%20Pu.jpg" />Denise PU<br />
+	Founder, YOLOBOO</p>
+
+	<p>MBA 2010</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><img alt="" class="peoplepics" src="/sites/default/files/pictures/Xuan%20GONG.jpg" />Xuan GONG<br />
+	Co-founder, YOLOBOO</p>
+
+	<p>MBA 2010</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6685"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Leo%20TAO.jpg" />Leo TAO</a><br />
+	Founder, Lohhas</p>
+
+	<p>EMBA 2010</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6684"><img alt="" class="peoplepics" src="/sites/default/files/pictures/jinhay.jpg" />Jinha LEE</a><br />
+	Founder, Nukkadly</p>
+
+	<p>MBA 2011</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6811"><img alt="" class="peoplepics" src="/sites/default/files/pictures/yuminlin.jpg" />Yu-Min LIN</a><br />
+	Founder, River Security</p>
+
+	<p>EMBA 2013</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6680"><img alt="" class="peoplepics" src="/sites/default/files/pictures/zhangcheng.jpg" />Cheng ZHANG</a><br />
+	Founder, Lovelive</p>
+
+	<p>CMO 2014</p>
+	</div>
+
+	<h3 style="clear:both">Evaluation</h3>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6689"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Daniel%20Wang.jpg" />Daniel WANG</a><br />
+	Founder, PARADISH</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6813"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Michael%20TANG.jpg" />Michael TANG</a><br />
+	Founder, Moushibang</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6690"><img alt="" class="peoplepics" src="/sites/default/files/pictures/yangcheng.jpg" />Cheng YANG</a><br />
+	Co-founder, Moushibang</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<h3 style="clear:both">Design</h3>
+
+	<div class="peoplebox">
+	<p><img alt="" class="peoplepics" src="/sites/default/files/pictures/niklas.jpg" />Niklaus MUELLER<br />
+	Founder, HVA</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6692"><img alt="" class="peoplepics" src="/sites/default/files/pictures/deqingzheng.jpg" />Deqing ZHENG</a><br />
+	Co-founder, Providence Capital Partner</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6693"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Diego%20GARCIA%20FERNANDEZ.jpg" />Diego GARCIA FERNANDEZ</a><br />
+	Founder, Canary Elder</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><img alt="" class="peoplepics" src="/sites/default/files/pictures/davidzhang.jpg" />David ZHANG<br />
+	Co-founder, Youker</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6695"><img alt="" class="peoplepics" src="/sites/default/files/pictures/jeffreytchui.jpg" />Jeffrey Tchui</a><br />
+	Founder, White Collar</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6814"><img alt="" class="peoplepics" src="/sites/default/files/pictures/andrewlui.jpg" />Andrew Lui</a><br />
+	Co-funder, White Collar</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><img alt="" class="peoplepics" src="/sites/default/files/pictures/Stephanie%20LU.jpg" />Stephanie LU<br />
+	Co-funder, C One</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><img alt="" class="peoplepics" src="/sites/default/files/pictures/Mike%20YING.jpg" />Mike YING<br />
+	Founder, Train &amp; Go</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6682"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Jessie%20LIU.jpg" />Jessie LIU</a><br />
+	Founder, Lucky Baby</p>
+
+	<p>MBA 2012</p>
+	</div>
+
+	<h3 style="clear:both">Idea</h3>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6707"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Urs.png" />Urs CASAGRANDE</a><br />
+	Founder, KiFly</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6702"><img alt="" class="peoplepics" src="/sites/default/files/pictures/cyruschen.jpg" />Zhe CHEN</a><br />
+	Founder, Fit+</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6703"><img alt="" class="peoplepics" src="/sites/default/files/pictures/yanjun.jpg" />Jun YAN</a><br />
+	Co-founder, Fit+</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6704"><img alt="" class="peoplepics" src="/sites/default/files/pictures/wenxinli.jpg" />Wenxin LI</a><br />
+	Co-founder, Fit+</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6706"><img alt="" class="peoplepics" src="/sites/default/files/pictures/shawnshao.jpg" />Shawn SHAO</a><br />
+	Founder, ZoZo wood</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6705"><img alt="" class="peoplepics" src="/sites/default/files/pictures/jessiemiller.jpg" />Jesse MILLER</a><br />
+	Founder, Sustain</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6700"><img alt="" class="peoplepics" src="/sites/default/files/pictures/arpit.jpg" />Arpit MISHRA</a><br />
+	Founder, Attainer</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6701"><img alt="" class="peoplepics" src="/sites/default/files/pictures/gabriel.jpg" />Gabriel PEI</a><br />
+	Co-founder, Attainer</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6698"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Arie.jpg" />Arie FASMAN</a><br />
+	Founder, DS Accelerator</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6697"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Amit.jpg" />Amit JANGIR</a><br />
+	Co-founder, DS Accelerator</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6699"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Roy.jpg" />Yongki Hong</a><br />
+	Co-founder, DS Accelerator</p>
+
+	<p>MBA 2017</p>
+	</div>
+	</li>
+	<li>
+	<h3 style="clear:both">Batch 1 (Oct. 2015-Feb. 2016)</h3>
+
+	<h3 style="clear:both">Acceleration</h3>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6813"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Michael%20TANG.jpg" />Michael TANG</a><br />
+	Founder, Moushibang</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6690"><img alt="" class="peoplepics" src="/sites/default/files/pictures/yangcheng_0.jpg" />Cheng YANG</a><br />
+	Co-founder, Moushibang</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<h4 style="clear:both">Evaluation</h4>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6691"><img alt="" class="peoplepics" src="/sites/default/files/pictures/davidzhang.jpg" />David ZHANG (CFO)</a><br />
+	Co-founder, Youker</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6689"><img alt="" class="peoplepics" src="/sites/default/files/pictures/danielwang.jpg" />Daniel WANG</a><br />
+	Founder, Weiban Event</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/elab"><img alt="" class="peoplepics" src="/sites/default/files/pictures/jayha.jpg" />Jay HA</a><br />
+	Founder, BMI</p>
+
+	<p>GMBA 2014</p>
+	</div>
+
+	<h3 style="clear:both">Design</h3>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6698"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Arie.jpg" />Arie FASMAN</a><br />
+	Co-founder, Fasman</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6693"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Diego%20GARCIA%20FERNANDEZ.jpg" />Diego GARCIA FERNANDEZ</a></p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<h3 style="clear:both">Idea</h3>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6705"><img alt="" class="peoplepics" src="/sites/default/files/pictures/jessiemiller.jpg" />Jesse MILLER</a><br />
+	Founder, J&amp;H</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6697"><img alt="" class="peoplepics" src="/sites/default/files/pictures/Amit.jpg" />Amit JANGIR</a><br />
+	Founder, Luxury Infinite</p>
+
+	<p>MBA 2017</p>
+	</div>
+
+	<div class="peoplebox">
+	<p><a href="http://www.ceibs.edu/node/6700"><img alt="" class="peoplepics" src="/sites/default/files/pictures/arpit_0.jpg" />Arpit MISHRA</a><br />
+	Founder, Learn'n'Lance</p>
+
+	<p>MBA 2017</p>
+	</div>
+	</li>
+</ul>
