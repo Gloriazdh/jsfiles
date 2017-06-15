@@ -4,7 +4,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width">
         <meta name="applicable-device" content="pc,mobile">
-		<title>JQuery表格搜索</title>
+		<title>商品搜索</title>
 		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
         <script type="text/javascript">
     var DataTableHTML = $("#myTable").html();//加载网页的时候先把表格的搜索内容保存起来，一会儿搜索结果将填充这个表格。
@@ -59,38 +59,45 @@ window.onload=function(){
   
 <!-- CSS goes in the document HEAD or added to your external stylesheet -->  
 <style type="text/css">  
-table.altrowstable {  
-    font-family: verdana,arial,sans-serif;  
-    font-size:11px;  
+table#myTable {  
+    font-family: Microsoft Yahei, verdana,arial,sans-serif;  
+    font-size:14px;  
     color:#333333;  
     border-width: 1px;  
     border-color: #a9c6c9;  
     border-collapse: collapse;  
 }  
-table.altrowstable th {  
+table#myTable th {  
     border-width: 1px;  
     padding: 8px;  
     border-style: solid;  
-    border-color: #a9c6c9;  
+    background-color: #48b8e8; 
+	color: #fff;
 }  
-table.altrowstable td {  
+table#myTable td {  
     border-width: 1px;  
     padding: 8px;  
     border-style: solid;  
-    border-color: #a9c6c9;  
+    border-color: #fff;  
 }  
 .oddrowcolor{  
-    background-color:#d4e3e5;  
+    background-color:#fff;  
 }  
 .evenrowcolor{  
-    background-color:#c3dde0;  
-}  
+    background-color:#ccedfb;  
+}
+.searchform {margin: 20px auto; text-align:center;} 
+.searchform button{height: 35px; width: 60px; background-color:#2d92be; font-size: 15px; border: none; color: #fff; font-weight: bold; font-family: Microsoft Yahei; margin-left: 5px;} 
+#search {width: 80%; max-width: 300px; height: 28px;}
+#myTable a {text-decoration: none; color: #333;}
+#myTable a:hover { border-bottom: 1px dotted #10749f;}
 </style>  
   
 	</head>
 <body>
-		<input type="text" id="search"><button onclick="search()">搜索</button>
-    <p>&nbsp;</p>
+<div class="searchform">
+		<input type="text" id="search">&nbsp;<button onclick="search()">搜索</button>
+    </div>
     <table width="100%" border="0" id="myTable">
 		<thead>  
 	        <tr>  
