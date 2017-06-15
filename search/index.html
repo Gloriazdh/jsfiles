@@ -1,0 +1,221 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="applicable-device" content="pc,mobile">
+		<title>JQuery表格搜索</title>
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript">
+    var DataTableHTML = $("#myTable").html();//加载网页的时候先把表格的搜索内容保存起来，一会儿搜索结果将填充这个表格。
+    function search(){
+        var searchStr = document.getElementById("search").value;//取出搜索框的内容
+        $("#myTable").html(DataTableHTML);//先将加载网页时的表格内容填充表格，在进行搜索，否则多次搜索之后，就是在搜索结果中再搜索了。
+        var DataTableBody = document.getElementById("myTable").tBodies[0];//取出tbody的内容
+        var DataRowsArr = DataTableBody.rows;//把tbody的每一行取出来形成一个数组，jQuery不知道怎么写，这里用javascript实现。
+        var MyArr = new Array();//建立一个空数组，用来存含有搜索内容的行节点
+        var MyArrRowsCount = 0;//空数组的索引值
+        for (var i = 0; i < DataRowsArr.length; i++) {//对表格的每一行进行遍历
+            var isSearchStrExisted = false;
+            for (var j = 0; j < DataRowsArr[i].cells.length; j++) {//对每一行中的每一个单元格进行遍历
+                var cellInnerHTML = DataRowsArr[i].cells[j].innerHTML + "";//取出单元格的内容
+                if (cellInnerHTML.indexOf(searchStr) > -1) {//如果其含有用户输入的搜索的内容，
+                    MyArr[MyArrRowsCount] = DataRowsArr[i];//则加入的空数组中
+                	MyArrRowsCount++;//索引+1
+                }
+            }
+        }
+        $(DataTableBody).html("");//利用jQuery清空原来的tbody，这里用Javascript实现不了……
+        var frag = document.createDocumentFragment();//建立一个文件碎片
+        for (var i = 0; i < MyArr.length; i++) {
+            frag.appendChild(MyArr[i]);//将匹配搜索结果的行全部添加到文件碎片中  
+        }
+        DataTableBody.appendChild(frag);//再把这个文件碎片放上tbody
+    }
+</script>
+<!-- Javascript goes in the document HEAD -->  
+<script type="text/javascript">  
+function altRows(id){  
+    if(document.getElementsByTagName){    
+          
+        var table = document.getElementById(id);    
+        var rows = table.getElementsByTagName("tr");   
+           
+        for(i = 0; i < rows.length; i++){            
+            if(i % 2 == 0){  
+                rows[i].className = "evenrowcolor";  
+            }else{  
+                rows[i].className = "oddrowcolor";  
+            }        
+        }  
+    }  
+}  
+  
+window.onload=function(){  
+    altRows('myTable');  
+}  
+</script>  
+  
+  
+<!-- CSS goes in the document HEAD or added to your external stylesheet -->  
+<style type="text/css">  
+table.altrowstable {  
+    font-family: verdana,arial,sans-serif;  
+    font-size:11px;  
+    color:#333333;  
+    border-width: 1px;  
+    border-color: #a9c6c9;  
+    border-collapse: collapse;  
+}  
+table.altrowstable th {  
+    border-width: 1px;  
+    padding: 8px;  
+    border-style: solid;  
+    border-color: #a9c6c9;  
+}  
+table.altrowstable td {  
+    border-width: 1px;  
+    padding: 8px;  
+    border-style: solid;  
+    border-color: #a9c6c9;  
+}  
+.oddrowcolor{  
+    background-color:#d4e3e5;  
+}  
+.evenrowcolor{  
+    background-color:#c3dde0;  
+}  
+</style>  
+  
+	</head>
+<body>
+		<input type="text" id="search"><button onclick="search()">搜索</button>
+    <p>&nbsp;</p>
+    <table width="100%" border="0" id="myTable">
+		<thead>  
+	        <tr>  
+	            <th width="9%">ID</th>  
+          <th width="64%">品名</th>
+	              <th width="13%">进价</th>  
+	            <th width="14%"><strong>售价</strong></th>  
+            </tr>  
+        </thead>  
+	    <tbody align="center">  
+	        <tr>  
+	            <td>1</td>  
+	            <td><a href="https://item.jd.com/2377401.html" clstag="click|keycount|orderinfo|order_product" target="_blank" title="【京东超市】澳宝（Opal）沐浴露 经典滋润200ml">澳宝（Opal）沐浴露 经典滋润200ml</a></td>
+		            <td>3</td>  
+	            <td><strong>6.5</strong></td>  
+            </tr>  
+	        <tr>  
+	            <td>2</td>  
+	            <td><a href="https://item.jd.com/1066893.html" clstag="click|keycount|orderinfo|order_product" target="_blank" title="【京东超市】舒肤佳沐浴露蜂蜜润护200ml（新老包装随机发货）">舒肤佳沐浴露蜂蜜润护200ml</a></td>
+		            <td>7</td>  
+	            <td><strong>12.5</strong></td>  
+            </tr>  
+	        <tr>  
+	            <td>3</td>  
+	            <td><a href="https://item.jd.com/906170.html" clstag="click|keycount|orderinfo|order_product" target="_blank" title="【京东超市】蜂花洗发精450ml（洗发水）">蜂花洗发精450ml（洗发水）</a></td>
+		            <td>3.5</td>  
+	            <td><strong>8.5</strong></td>  
+            </tr>  
+	        <tr>  
+	            <td>4</td>  
+	            <td><a href="https://item.jd.com/2082413.html" clstag="click|keycount|orderinfo|order_product" target="_blank" title="【京东超市】内蒙古特产 朗琨休闲零食 酸奶味奶酪150g">内蒙古特产 朗琨休闲零食 酸奶味奶酪150g</a></td>
+		            <td>3/1.5</td>  
+	            <td><strong>8</strong></td>  
+            </tr>  
+	        <tr>  
+	            <td>5</td>  
+	            <td><a href="http://item.jd.com/923626.html" clstag="click|keycount|orderinfo|order_product" target="_blank" title="【京东超市】可口可乐 零度 无糖汽水 500ml*24 整箱">可口可乐 零度 无糖汽水 500ml</a></td>
+		            <td>1.23</td>  
+	            <td><strong>3.5</strong></td>  
+            </tr>  
+	        <tr>  
+	            <td>6</td>  
+	            <td><a href="http://item.jd.com/3631613.html" clstag="click|keycount|orderinfo|order_product" target="_blank" title="【京东超市】雪碧（Sprite）饮料 雪碧零卡 500ml*12 PET整箱装">雪碧（Sprite）饮料 雪碧零卡 500ml</a></td>
+		            <td>1.23</td>  
+	            <td><strong>3.5</strong></td>  
+            </tr>  
+	        <tr>  
+	            <td>7</td>  
+	            <td><a href="http://item.jd.com/3285115.html" clstag="click|keycount|orderinfo|order_product" target="_blank" title="【京东超市】达利园欧式蛋糕香橙味 营养早餐零食饼干蛋糕 礼盒装600g">达利园欧式蛋糕香橙味 营养早餐零食饼干蛋糕 礼盒装600g</a></td>
+		            <td>11</td>  
+	            <td><strong>20</strong></td>  
+            </tr>  
+	        <tr>  
+	            <td>8</td>  
+	            <td><a href="http://item.jd.com/859627.html" clstag="click|keycount|orderinfo|order_product" target="_blank" title="【京东超市】达利园注心草莓派 营养早餐零食面包饼干蛋糕 250g">达利园注心草莓派 营养早餐零食面包饼干蛋糕 250g</a></td>
+		            <td>4.5</td>  
+	            <td><strong>8.5</strong></td>  
+            </tr>  
+	        <tr>  
+	            <td>9</td>  
+	            <td><a href="https://chaoshi.tmall.com/detail/view_detail.htm?item_id=529559572925&_u=f1lqb5vcf6c" target="_blank" rel="noopener noreferrer" data-reactid=".0.6:$order-27158550824435179.$27158550824435179.0.1:1:0.$1.$0.0.1.0.0"><span data-reactid=".0.6:$order-27158550824435179.$27158550824435179.0.1:1:0.$1.$0.0.1.0.0.1">三只松鼠 脆米锅巴260g休闲零食小吃特产糯米锅巴</span></a></td>
+		            <td>1.40</td>  
+	            <td><strong>7.5</strong></td>  
+            </tr>  
+	        <tr>  
+	            <td>10</td>  
+	            <td><a href="https://chaoshi.tmall.com/detail/view_detail.htm?spm=a1z09.2.0.0.xR6cr7&item_id=529713636356&_u=f1lqb5v47d0" target="_blank" rel="noopener noreferrer" data-reactid=".0.6:$order-27158550824435179.$27158550824435179.0.1:1:0.$2.$0.0.1.0.0" data-spm-anchor-id="a1z09.2.0.0"><span data-reactid=".0.6:$order-27158550824435179.$27158550824435179.0.1:1:0.$2.$0.0.1.0.0.1">三只松鼠 小贱脆薯100g休闲零食膨化食品薯片原味</span></a></td>
+		            <td>1.61</td>  
+	            <td><strong>7.5</strong></td>  
+            </tr>  
+	        <tr>
+	          <td>11</td>
+	          <td><a href="https://chaoshi.tmall.com/detail/view_detail.htm?spm=a1z09.2.0.0.xR6cr7&item_id=529618859202&_u=f1lqb5v9b1f" target="_blank" rel="noopener noreferrer" data-reactid=".0.6:$order-27158550824435179.$27158550824435179.0.1:1:0.$3.$0.0.1.0.0" data-spm-anchor-id="a1z09.2.0.0"><span data-reactid=".0.6:$order-27158550824435179.$27158550824435179.0.1:1:0.$3.$0.0.1.0.0.1">三只松鼠 小贱脆薯100g休闲零食膨化食品薯片番茄味</span></a></td>
+	          <td>1.61</td>
+	          <td><strong>7.5</strong></td>
+          </tr>
+	        <tr>
+	          <td>12</td>
+	          <td><a href="https://chaoshi.tmall.com/detail/view_detail.htm?item_id=549629750266&_u=f1lqb5v5654" target="_blank" rel="noopener noreferrer" data-reactid=".0.6:$order-27158550824435179.$27158550824435179.0.1:1:0.$5.$0.0.1.0.0"><span data-reactid=".0.6:$order-27158550824435179.$27158550824435179.0.1:1:0.$5.$0.0.1.0.0.1">海飞丝清爽去油洗发水500ml</span></a></td>
+	          <td>15</td>
+	          <td><strong>38</strong></td>
+          </tr>
+	        <tr>
+	          <td>13</td>
+	          <td><a href="https://chaoshi.tmall.com/detail/view_detail.htm?item_id=549629750266&_u=f1lqb5v5654" target="_blank" rel="noopener noreferrer" data-reactid=".0.6:$order-27158550824435179.$27158550824435179.0.1:1:0.$5.$0.0.1.0.0"><span data-reactid=".0.6:$order-27158550824435179.$27158550824435179.0.1:1:0.$5.$0.0.1.0.0.1">海飞丝清爽去油洗发水80ml</span></a></td>
+	          <td>1</td>
+	          <td><strong>7</strong></td>
+          </tr>
+	        <tr>
+	          <td>14</td>
+	          <td><a href="https://detail.tmall.com/item.htm?id=17237547140&ns=1&abbucket=18" target="_blank">金龙鱼 葵花籽清香型食用调和油5L/桶 人气爆款</a></td>
+	          <td>18.46</td>
+	          <td><strong>40</strong></td>
+          </tr>
+	        <tr>
+	          <td>15</td>
+	          <td>&nbsp;</td>
+	          <td>&nbsp;</td>
+	          <td>&nbsp;</td>
+          </tr>
+	        <tr>
+	          <td>16</td>
+	          <td>&nbsp;</td>
+	          <td>&nbsp;</td>
+	          <td>&nbsp;</td>
+          </tr>
+	        <tr>
+	          <td>17</td>
+	          <td>&nbsp;</td>
+	          <td>&nbsp;</td>
+	          <td>&nbsp;</td>
+          </tr>
+	        <tr>
+	          <td>18</td>
+	          <td>&nbsp;</td>
+	          <td>&nbsp;</td>
+	          <td>&nbsp;</td>
+          </tr>
+	        <tr>  
+	            <td>&nbsp;</td>  
+	            <td>&nbsp;</td>
+		            <td>&nbsp;</td>  
+	            <td>&nbsp;</td>  
+            </tr>  
+        </tbody>  
+    </table>
+</body>
+</html>
