@@ -1,0 +1,55 @@
+//根据不同选项显示或隐藏Banner和选择框
+<script>
+(function($){
+  $(document).ready(function(){
+    var ops=$("#edit-e-platform-event-category option:selected");
+    ops.each(function(){
+      if($(this).val()=="All"){$("#e-banner1").hide();$("#e-banner2").hide();$("#e-banner3").hide();}
+      if($(this).val()=="890"){$("#e-banner1").show();$("#e-banner2").hide();$("#e-banner3").hide();}
+      if($(this).val()=="891"){$("#e-banner1").hide();$("#e-banner2").show();$("#e-banner3").hide();}
+      if($(this).val()=="892"){$("#e-banner1").hide();$("#e-banner2").hide();$("#e-banner3").show();}
+    })
+$("#edit-e-platform-event-category").change(function(){
+      if($(this).val()=="All"){$("#e-banner1").hide();$("#e-banner2").hide();$("#e-banner3").hide();}
+      if($(this).val()=="890"){$("#e-banner1").show();$("#e-banner2").hide();$("#e-banner3").hide();}
+      if($(this).val()=="891"){$("#e-banner1").hide();$("#e-banner2").show();$("#e-banner3").hide();}
+      if($(this).val()=="892"){$("#e-banner1").hide();$("#e-banner2").hide();$("#e-banner3").show();}
+  })
+  })
+})(jQuery);
+</script>
+
+
+//根据浏览器语言判断到中英文首页
+<script>
+var cookieDays = 1;    //cookie days
+
+function setCookies(name, value) {
+    var exp = new Date();
+    exp.setTime(exp.getTime() + cookieDays * 24 * 60 * 60 * 1000);
+    document.cookie = name + "=" + escape(value) + ";path=/;expires=" + exp.toGMTString();
+}
+
+
+function getCookies(name) {
+    var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
+    if (arr != null) return unescape(arr[2]);
+    return null;
+}
+
+
+function isNew(){
+    return getCookies("newuser")==null?true:false;
+}
+
+if(isNew() && location.host=="www.xxx.com")
+{
+    setCookies("newuser","false");
+	if (navigator.appName == "Netscape") 
+    var lang = navigator.language.toLowerCase();
+    else
+    var lang = navigator.browserLanguage.toLowerCase();
+	
+	if(lang == "zh-cn" && location.host!="cn.xxx.com") document.location = "http://cn.xxx.com/";
+}
+</script>

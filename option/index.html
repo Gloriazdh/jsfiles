@@ -1,0 +1,48 @@
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script>
+(function($){
+  $(document).ready(function(){
+    var ops=$("#edit-e-platform-event-category option:selected");
+    ops.each(function(){
+      if($(this).val()=="All"){$("#e-banner1").hide();$("#e-banner2").hide();$("#e-banner3").hide();}
+      if($(this).val()=="Entrepreneurship Salon"){$("#e-banner1").show();$("#e-banner2").hide();$("#e-banner3").hide();}
+      if($(this).val()=="Entrepreneurship Contest"){$("#e-banner1").hide();$("#e-banner2").show();$("#e-banner3").hide();}
+      if($(this).val()=="Master Class"){$("#e-banner1").hide();$("#e-banner2").hide();$("#e-banner3").show();}
+    })
+$("#edit-e-platform-event-category").change(function(){
+      if($(this).val()=="All"){$("#e-banner1").hide();$("#e-banner2").hide();$("#e-banner3").hide();}
+      if($(this).val()=="Entrepreneurship Salon"){$("#e-banner1").show();$("#e-banner2").hide();$("#e-banner3").hide();}
+      if($(this).val()=="Entrepreneurship Contest"){$("#e-banner1").hide();$("#e-banner2").show();$("#e-banner3").hide();}
+      if($(this).val()=="Master Class"){$("#e-banner1").hide();$("#e-banner2").hide();$("#e-banner3").show();}
+  })
+  })
+})(jQuery);
+</script>
+<div id="e-banner1">banner1</div>
+<div id="e-banner2">banner2</div>
+<div id="e-banner3">banner3</div>
+<div class="views-widget">
+  <div class="form-type-select form-item-e-platform-event-category form-item form-group">
+    <div class="selectricWrapper selectric-form-control selectric-form-select">
+      <div class="selectricHideSelect">
+        <select class="form-control form-select" id="edit-e-platform-event-category" name="e_platform_event_category" tabindex="0">
+          <option value="All">- 所有 -</option>
+          <option value="Entrepreneurship Salon" selected="selected">Entrepreneurship Salon</option>
+          <option value="Entrepreneurship Contest">Entrepreneurship Contest</option>
+          <option value="Master Class">Master Class</option>
+        </select>
+      </div>
+      <div class="selectric">
+        <p class="label">Entrepreneurship Salon</p><b class="button">▾</b></div>
+      <div class="selectricItems" tabindex="-1">
+        <div class="selectricScroll">
+          <ul>
+            <li class="">- 所有 -</li>
+            <li class="selected">Entrepreneurship Salon</li>
+            <li class="">Entrepreneurship Contest</li>
+            <li class="last">Master Class</li>
+          </ul>
+        </div>
+      </div><input class="selectricInput" tabindex="0"></div>
+  </div>
+</div>

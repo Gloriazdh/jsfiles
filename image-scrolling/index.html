@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="keywords" content="JS代码,图片特效,JS广告代码,JS特效代码" />
+<meta name="description" content="此代码内容为四图横向滚动效果（可自动可手动），属于站长常用代码，更多图片特效代码请访问懒人图库JS代码频道。" />
+<title>左右横向滚动图片列表- 聚合素材网演示页www.juheweb.com</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/juheweb.js"></script>
+</head>
+
+<body><br />
+<style>
+body,ul,li{ padding:0; margin:0;}
+ul,li{ list-style:none;}
+img{ border:none;}
+a{ color:#6cf;}
+a:hover{ color:#84B263;}
+.boxbox{ width:980px; margin:0 auto; position:relative; overflow:hidden; _height:100%;}
+.picbox{ width:980px; height:115px; overflow:hidden; position:relative;}
+.piclist{ height:115px;position:absolute; left:0px; top:0px}
+.piclist li{ background:#eee; margin-right:20px; padding:5px; float:left;}
+.swaplist{ position:absolute; left:-3000px; top:0px}
+.og_prev,.og_next{ width:30px; height:50px; background:url(images/icon.png) no-repeat; background:url(images/icon_ie6.png) no-repeat\9; position:absolute; top:33px; z-index:99; cursor:pointer;filter:alpha(opacity=70); opacity:0.7;}
+.og_prev{ background-position:0 -60px; left:4px;}
+.og_next{ background-position:0 0; right:4px;}
+</style>
+<div class="boxbox">
+	<div class="picbox">
+		<ul class="piclist mainlist">
+			<li><a href="http://www.juheweb.com/" target="_blank"><img src="images/1.jpg" width="220" height="105" /></a></li>
+			<li><a href="http://www.juheweb.com/" target="_blank"><img src="images/2.jpg" /></a></li>
+			<li><a href="http://www.juheweb.com/" target="_blank"><img src="images/3.jpg" /></a></li>
+			<li><a href="http://www.juheweb.com/" target="_blank"><img src="images/4.jpg" /></a></li>
+			<li><a href="http://www.juheweb.com/" target="_blank"><img src="images/1.jpg" /></a></li>
+            <li><a href="http://www.juheweb.com/" target="_blank"><img src="images/2.jpg" /></a></li>
+			<li><a href="http://www.juheweb.com/" target="_blank"><img src="images/3.jpg" /></a></li>
+			<li><a href="http://www.juheweb.com/" target="_blank"><img src="images/4.jpg" /></a></li>
+		</ul>
+        <ul class="piclist swaplist"></ul>
+	</div>
+	<div class="og_prev"></div>
+	<div class="og_next"></div>
+</div>
+
+
+</body>
+</html>
